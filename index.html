@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#167567">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="まいにちチェック">
+<meta name="description" content="水分とお薬を、押すだけで記録。訪問時に一緒に振り返れる7日間の記録。">
+<title>まいにちチェック｜水分とお薬</title>
+<style>
+:root{color-scheme:light;--ink:#243d39;--muted:#536660;--green:#167567;--pale:#eaf5ef;--line:#d7e3dd;--blue:#146ca3;--bg:#f5f7f2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.65 -apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button:disabled{cursor:default;opacity:.5}button,a,input,summary{outline-offset:4px}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #bb6807}button{border:0;border-radius:15px;min-height:58px;font-weight:700}a{color:var(--green)}.wrap{max-width:820px;margin:auto;padding:28px 20px calc(32px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px}.brand{font-size:23px;letter-spacing:.02em;font-weight:800;display:flex;align-items:center;gap:10px}.brandmark{display:grid;place-items:center;background:var(--green);color:white;border-radius:14px;width:44px;height:44px}.private{font-size:15px;color:var(--muted)}h1{font-size:34px;line-height:1.35;margin:7px 0 14px}h2{font-size:26px;line-height:1.5;margin:0}h3{font-size:22px;margin:10px 0}.eyebrow{font-size:17px;color:var(--muted);margin:0}.intro{margin-bottom:24px}.day{font-size:21px;margin:0}.summary{background:var(--pale);border:1px solid #cfe2d3;padding:18px 20px;border-radius:18px;display:flex;gap:14px;align-items:center}.summary-icon{font-size:30px}.summary strong{display:block;font-size:22px}.summary p{font-size:18px;margin:2px 0;color:var(--muted)}.card{background:white;border:1px solid var(--line);border-radius:24px;padding:24px;margin-top:22px;box-shadow:0 3px 0 #203f3103}.card-head{display:flex;align-items:center;gap:12px}.icon{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#edf6fd;font-size:26px}.medicine .icon{background:#fff3e2}.hint{font-size:18px;color:var(--muted);margin:12px 0}.water-total{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px;margin-top:14px}.water-total strong{font-size:58px;line-height:1.4;letter-spacing:-.04em;color:var(--blue);font-variant-numeric:tabular-nums}.water-total .unit{font-size:25px;color:var(--blue);font-weight:700}.target{color:var(--muted);font-size:20px;margin-left:8px}progress{display:block;width:100%;height:14px;appearance:none;border:0;border-radius:20px;overflow:hidden;background:#e8efef;margin:12px 0}progress::-webkit-progress-bar{background:#e8efef;border-radius:20px}progress::-webkit-progress-value{background:var(--blue);border-radius:20px}progress::-moz-progress-bar{background:var(--blue)}.water-note{font-size:19px;margin:12px 0 18px}.water-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.water-add{background:#e9f4fb;border:2px solid #c8e3f2;color:#155d88;min-height:94px;font-size:27px;line-height:1.2}.water-add small{display:block;font-size:18px;margin-top:7px}.water-add:active{background:#d3eaf8;transform:translateY(1px)}.utility{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center;justify-content:space-between}.secondary{background:white;border:1px solid #adbfb5;color:#37564b;font-size:18px;padding:10px 16px}.last-water{font-size:16px;color:var(--muted);margin:12px 0 0}.med-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.med-button{border:2px solid #d8e0d9;background:#fff;min-height:110px;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:8px;text-align:left;color:var(--ink)}.med-name{font-size:24px;display:block}.med-detail{display:block;font-size:17px;color:var(--muted);font-weight:400}.med-state{font-size:18px;border:1px solid #8b9f94;border-radius:10px;padding:6px 11px;white-space:nowrap}.med-button[aria-pressed=true]{background:var(--pale);border-color:#77ac94}.med-button[aria-pressed=true] .med-state{background:var(--green);border-color:var(--green);color:#fff}.history-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.badge{font-size:16px;color:var(--muted);white-space:nowrap}.history-summary{background:#f5f7f2;border-radius:13px;padding:14px 16px;margin-top:18px;font-size:18px}.history-summary p{margin:2px 0}.table-scroll{overflow-x:auto;margin-top:18px}table{width:100%;border-collapse:collapse;font-size:18px;text-align:center;white-space:nowrap}caption{text-align:left;font-size:17px;color:var(--muted);padding:0 0 12px}th{font-weight:600;font-size:16px;color:var(--muted);padding:10px 5px;border-bottom:1px solid var(--line)}td{padding:15px 5px;border-bottom:1px solid #e7ece7}th:first-child,td:first-child{text-align:left}td:nth-child(2){font-variant-numeric:tabular-nums;font-weight:700}td small{display:block;font-size:13px;font-weight:400;color:var(--muted)}tr.today{background:#f2f8f3}.checked{color:var(--green);font-weight:800}.unchecked{color:#697771}.no-record{font-size:16px;color:var(--muted)}.legend{font-size:16px;color:var(--muted);margin:12px 0 0}details{margin-top:24px;padding:18px 4px;border-top:1px solid var(--line);font-size:18px}summary{cursor:pointer;font-weight:700;min-height:48px;display:list-item;padding:10px 0}details p{color:var(--muted)}details li{margin:12px 0}footer{font-size:15px;color:var(--muted);text-align:center;margin:20px 0}.status{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 28px);background:#243d39;color:#fff;border-radius:15px;padding:14px 20px;font-size:19px;z-index:10;box-shadow:0 5px 25px #0002}.status:empty{display:none}.error{background:#fff0e9;border:2px solid #aa5131;border-radius:15px;padding:16px;color:#72351e;margin:16px 0;font-size:18px}.error[hidden]{display:none}dialog{width:calc(100% - 32px);max-width:500px;padding:26px;border:1px solid var(--line);border-radius:23px;color:var(--ink);max-height:90dvh;overflow:auto}dialog::backdrop{background:#1c332b77}dialog h2{margin-bottom:10px}dialog p{font-size:19px}dialog input{display:block;width:100%;min-height:60px;border:2px solid #91a69b;border-radius:12px;padding:10px;margin-top:10px;font-size:26px}.dialog-actions{display:flex;gap:10px;margin-top:22px}.dialog-actions button{flex:1;padding:12px}.primary{background:var(--green);color:#fff}.field-error{color:#9b391d;font-size:17px;min-height:1.5em}.skip{position:absolute;top:-100px;left:10px;background:white;z-index:30;padding:12px}.skip:focus{top:8px}@media(max-width:520px){.wrap{padding:18px 16px calc(22px + env(safe-area-inset-bottom))}header{margin-bottom:21px}.brand{font-size:21px}.private{display:none}h1{font-size:30px}.card{padding:20px 16px;border-radius:21px}.med-list{grid-template-columns:1fr}.med-button{min-height:92px}.water-buttons{gap:8px}.water-add{font-size:25px;min-height:92px}.target{margin-left:0;font-size:18px}.water-total strong{font-size:53px}.summary{padding:16px}.summary strong{font-size:21px}.history-head{align-items:flex-start}.badge{padding-top:6px}.water-note{font-size:18px}table{font-size:16px}th,td{padding-left:3px;padding-right:3px}.secondary{font-size:17px}.utility{align-items:stretch}.utility button{flex:1}.history-summary{font-size:17px}.icon{width:43px;height:43px}h2{font-size:24px}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s,border-color .15s}}@media print{body{background:white}.wrap{max-width:none}.water-buttons,.utility,details,.status,.skip{display:none}.card{break-inside:avoid;box-shadow:none}button{border:1px solid #aaa}.private{display:block}footer{margin:10px}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">今日のチェックへ</a>
+<div class="wrap">
+<header><div class="brand"><span class="brandmark" aria-hidden="true">✓</span>まいにちチェック</div><span class="private">この端末に保存</span></header>
+<main id="main">
+<section class="intro"><p class="eyebrow">水分とお薬の記録</p><h1>今日のチェック</h1><p id="date" class="day"></p></section>
+<noscript><p class="error">このアプリにはJavaScriptが必要です。ブラウザの設定で有効にしてください。</p></noscript>
+<div id="storage-error" class="error" role="alert" hidden></div>
+<div class="summary"><span class="summary-icon" aria-hidden="true">☘</span><div><strong id="summary-title">今日の記録をはじめましょう</strong><p id="summary-detail">飲んだら、下のボタンを押してください。</p></div></div>
+<section class="card water" aria-labelledby="water-heading">
+<div class="card-head"><span class="icon" aria-hidden="true">💧</span><h2 id="water-heading">水分チェック</h2></div>
+<div class="water-total"><strong id="water-total">0</strong><span class="unit">ml</span><span id="target" class="target">目標 未設定</span></div>
+<progress id="water-progress" max="100" value="0" aria-label="今日の水分記録と目標" hidden></progress>
+<p id="water-note" class="water-note">目標量は看護師さんと確認して設定できます。</p>
+<p class="hint">飲んだ量を押してください</p>
+<div class="water-buttons"><button class="water-add" data-amount="100" aria-label="水分100ミリリットルを記録">＋100<small>ml</small></button><button class="water-add" data-amount="200" aria-label="水分200ミリリットルを記録">＋200<small>ml</small></button><button class="water-add" data-amount="300" aria-label="水分300ミリリットルを記録">＋300<small>ml</small></button></div>
+<p id="last-water" class="last-water">今日の水分は、まだ記録されていません</p>
+<div class="utility"><button id="undo-water" class="secondary" disabled>↶ ひとつ前を取り消す</button><button id="open-goal" class="secondary">目標量を設定</button></div>
+</section>
+<section class="card medicine" aria-labelledby="med-heading"><div class="card-head"><span class="icon" aria-hidden="true">💊</span><h2 id="med-heading">お薬チェック</h2></div><p class="hint">お薬を飲んだあとに押してください。<br>チェック済みを押すと取り消せます。</p><div id="med-list" class="med-list"></div><p class="legend">飲むお薬がある時間帯だけ記録してください。<br>未チェックは、飲み忘れを示すものではありません。</p></section>
+<section class="card" aria-labelledby="history-heading"><div class="history-head"><h2 id="history-heading">7日間の振り返り</h2><span class="badge">今日を含む7日間</span></div><p class="hint">訪問時に、看護師さんと一緒に確認できます。</p><div id="history-summary" class="history-summary"></div><div class="table-scroll" tabindex="0" role="region" aria-label="7日間の記録表。幅が狭い場合は横にスクロールできます"><table><caption>水分の合計と、お薬のチェック</caption><thead><tr><th scope="col">日付</th><th scope="col">水分<small> (ml)</small></th><th scope="col">朝</th><th scope="col">昼</th><th scope="col">夕</th><th scope="col">寝前</th></tr></thead><tbody id="history-body"></tbody></table></div><p class="legend">✓ チェック済み　○ 未チェック　— 記録なし<br>「寝前」は寝る前のお薬です。</p></section>
+<details><summary>使い方・ホーム画面への追加</summary><h3>毎日の使い方</h3><p>水分を飲んだら、飲んだ量を押します。間違えたときは「ひとつ前を取り消す」を押してください。お薬は実際に飲んだあとに、その時間帯を押します。記録の時刻はボタンを押した時刻です。</p><p>目標量は、主治医・看護師と確認した量を設定してください。このアプリは服薬や水分量の指示を行うものではありません。</p><h3>スマホのホーム画面へ</h3><p>このHTMLをHTTPSのWebサイトに置き、そのURLをスマホで開いて使うことを想定しています。端末内のHTMLファイルを開くだけでは、ホーム画面への追加や記録保存が制限される場合があります。</p><ol><li>iPhone：SafariでURLを開き、「共有」メニューから「ホーム画面に追加」を選びます。</li><li>Android：ChromeでURLを開き、メニューから「ホーム画面に追加」を選びます。表示名は機種により異なります。</li></ol><p>ホーム画面への追加後に目標設定・記録を始め、いつも同じアイコンから開いてください。ブラウザ版とホーム画面版で保存先が分かれる場合があります。</p><h3>記録の保存について</h3><p>記録は、この端末のこのブラウザ内に保存されます。名前の入力やアカウント登録は不要です。家族・看護師の端末との共有や自動送信はありません。1人につき1台・同じブラウザで使ってください。</p><p>ブラウザのデータ削除、プライベート閲覧、端末変更、Webサイトのアドレス変更などで記録が消えたり、参照できなくなったりする場合があります。この初版にはバックアップ機能はありません。</p><p>端末の日付に合わせて、新しい日の画面に切り替わります。昨日までの記録は残り、表には直近7日間を表示します。目標変更は当日から反映され、前日までの目標は変わりません。</p><p>この1ファイル版には通知機能や、オフラインでの再起動を保証する機能はありません。ホーム画面から開く際は通信できる環境でお使いください。</p></details>
+</main><footer>まいにちチェック · 初版<br>記録をもとに、訪問時の会話を。</footer>
+</div>
+<div id="status" class="status" role="status" aria-live="polite" aria-atomic="true"></div>
+<dialog id="goal-dialog" aria-labelledby="goal-title"><form id="goal-form" novalidate><h2 id="goal-title">水分の目標量</h2><p>主治医・看護師と確認した<br>1日の量を入力してください。</p><label for="goal-input">1日の目標（ml）</label><input id="goal-input" type="number" inputmode="numeric" min="1" max="10000" step="1" placeholder="確認した量を入力" required aria-describedby="goal-error"><div id="goal-error" class="field-error" role="alert"></div><p class="hint">当日から反映されます。</p><div class="dialog-actions"><button type="button" id="cancel-goal" class="secondary">やめる</button><button type="submit" class="primary">保存する</button></div></form></dialog>
+<dialog id="undo-dialog" aria-labelledby="undo-title"><h2 id="undo-title">記録を取り消しますか？</h2><p id="undo-description"></p><div class="dialog-actions"><button id="cancel-undo" class="secondary">戻る</button><button id="confirm-undo" class="primary">取り消す</button></div></dialog>
+<script>
+'use strict';
+const STORAGE_KEY='mainichi-health-v1';
+const MEDS=[['morning','朝'],['noon','昼'],['evening','夕'],['bedtime','寝る前']];
+const $=id=>document.getElementById(id);
+const dateKey=(date=new Date())=>`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+const clockTime=iso=>new Date(iso).toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit',hour12:false});
+const fmt=n=>n.toLocaleString('ja-JP');
+const sum=day=>day.water.reduce((n,event)=>n+event.amount,0);
+const count=day=>MEDS.filter(([key])=>day.meds[key]).length;
+const blankDay=goal=>({goal,water:[],meds:{}});
+const validGoal=goal=>goal===null||(Number.isInteger(goal)&&goal>0&&goal<=10000);
+const validTime=t=>typeof t==='string'&&Number.isFinite(Date.parse(t));
+function validate(data){
+ if(!data||data.version!==1||!validGoal(data.goal)||!data.days||typeof data.days!=='object'||Array.isArray(data.days))throw Error('invalid data');
+ for(const [key,day] of Object.entries(data.days)){
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(key)||!day||!validGoal(day.goal)||!Array.isArray(day.water)||!day.meds||typeof day.meds!=='object'||Array.isArray(day.meds))throw Error('invalid day');
+  if(day.water.some(e=>!e||![100,200,300].includes(e.amount)||!validTime(e.at)))throw Error('invalid water');
+  if(Object.entries(day.meds).some(([slot,t])=>!MEDS.some(([key])=>key===slot)||!validTime(t)))throw Error('invalid meds');
+ }
+ return data;
+}
+let state={version:1,goal:null,days:{}},readFailed=false,activeDay=dateKey(),pendingUndo=null,noticeTimer;
+function error(text){$('storage-error').textContent=text;$('storage-error').hidden=false;}
+function readStore(){const raw=localStorage.getItem(STORAGE_KEY);return raw===null?{version:1,goal:null,days:{}}:validate(JSON.parse(raw));}
+try{state=readStore();const testKey=STORAGE_KEY+'-probe';localStorage.setItem(testKey,'1');localStorage.removeItem(testKey);}catch(e){readFailed=true;error('記録の読み込み、または保存ができません。既存の記録を保護するため入力を停止しています。通常のブラウザで開き直してください。');}
+function announce(text){clearTimeout(noticeTimer);$('status').textContent=text;noticeTimer=setTimeout(()=>{$('status').textContent='';},4200);}
+function syncDate(){
+ const now=dateKey();if(now===activeDay)return false;
+ activeDay=now;pendingUndo=null;if($('undo-dialog').open)$('undo-dialog').close();render();announce('日付が変わりました。今日の画面に切り替えました。');return true;
+}
+function commit(change){
+ if(readFailed)return false;
+ try{
+  // Re-read before writes so another open tab's existing records are retained.
+  const next=readStore();change(next);validate(next);localStorage.setItem(STORAGE_KEY,JSON.stringify(next));state=next;$('storage-error').hidden=true;render();return true;
+ }catch(e){error('保存できませんでした。今回の操作は反映されていません。ブラウザの保存設定や空き容量を確認して、もう一度お試しください。');return false;}
+}
+function today(data=state){return data.days[activeDay]||blankDay(data.goal);}
+function writableDay(data){return data.days[activeDay]||(data.days[activeDay]=blankDay(data.goal));}
+function render(){
+ const day=today(),total=sum(day),checks=count(day),goal=day.goal;
+ $('date').textContent=new Date().toLocaleDateString('ja-JP',{month:'long',day:'numeric',weekday:'long'});
+ $('water-total').textContent=fmt(total);$('target').textContent=goal===null?'目標 未設定':`／ 目標 ${fmt(goal)} ml`;
+ $('water-progress').hidden=goal===null;$('water-progress').style.display=goal===null?'none':'block';$('water-progress').max=goal||1;$('water-progress').value=Math.min(total,goal||0);$('water-progress').setAttribute('aria-valuetext',goal===null?'目標未設定':`${total}ミリリットル、目標${goal}ミリリットル`);
+ $('water-note').textContent=goal===null?'目標量は看護師さんと確認して設定できます。':total<goal?`目標まで ${fmt(goal-total)} ml（確認した量を目安に）`:'設定した目標量に達しました。';
+ $('open-goal').textContent=goal===null?'目標量を設定':'目標量を変更';
+ const last=day.water.at(-1);$('last-water').textContent=last?`直前の記録：${clockTime(last.at)} ／ ${last.amount} ml`:'今日の水分は、まだ記録されていません';
+ $('undo-water').disabled=readFailed||!last;$('open-goal').disabled=readFailed;document.querySelectorAll('[data-amount]').forEach(button=>button.disabled=readFailed);
+ $('summary-title').textContent=checks===4&&goal!==null&&total>=goal?'今日のチェックがそろいました':total||checks?'今日の記録ができています':'今日の記録をはじめましょう';
+ $('summary-detail').textContent=`水分 ${goal===null?'目標未設定':total>=goal?'目標達成':'記録 '+fmt(total)+' ml'} ・ お薬 ${checks} / 4 枠チェック済み`;
+ $('med-list').replaceChildren(...MEDS.map(([slot,label])=>{
+  const time=day.meds[slot],button=document.createElement('button');button.className='med-button';button.type='button';button.disabled=readFailed;button.setAttribute('aria-pressed',String(Boolean(time)));button.setAttribute('aria-label',`${label}のお薬。${time?clockTime(time)+'にチェック済み。押すと取り消しの確認':'未チェック。飲んだら押して記録'}`);
+  const text=document.createElement('span'),name=document.createElement('span'),detail=document.createElement('span'),badge=document.createElement('span');name.className='med-name';name.textContent=`${label}のお薬`;detail.className='med-detail';detail.textContent=time?`${clockTime(time)} に記録`:'飲んだら押す';badge.className='med-state';badge.textContent=time?'✓ 飲んだ':'まだ';text.append(name,detail);button.append(text,badge);button.addEventListener('click',()=>toggleMed(slot,label));return button;
+ }));
+ renderHistory();
+}
+function renderHistory(){
+ const dates=Array.from({length:7},(_,i)=>{const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()-i);return d;});
+ let waterDays=0,totalWater=0,medChecks=0;
+ const rows=dates.map((date,index)=>{
+  const key=dateKey(date),day=state.days[key],row=document.createElement('tr');if(index===0)row.className='today';
+  const label=document.createElement('th');label.scope='row';label.textContent=index===0?'今日':`${date.getMonth()+1}/${date.getDate()}(${['日','月','火','水','木','金','土'][date.getDay()]})`;row.append(label);
+  const amount=document.createElement('td');
+  if(day?.water.length){const total=sum(day);waterDays++;totalWater+=total;amount.textContent=fmt(total);const target=document.createElement('small');target.textContent=day.goal===null?'目標なし':`目標 ${fmt(day.goal)}`;amount.append(target);}else{amount.textContent='—';amount.setAttribute('aria-label','水分の記録なし');}
+  row.append(amount);
+  for(const [slot,label] of MEDS){const cell=document.createElement('td'),time=day?.meds[slot],recorded=day&&(day.water.length||count(day));cell.textContent=time?'✓':recorded?'○':'—';cell.className=time?'checked':'unchecked';cell.setAttribute('aria-label',`${label}：${time?clockTime(time)+'にチェック済み':recorded?'未チェック':'記録なし'}`);row.append(cell);if(time)medChecks++;}
+  return row;
+ });$('history-body').replaceChildren(...rows);
+ const water=document.createElement('p'),med=document.createElement('p');water.textContent=waterDays?`水分の平均 ${fmt(Math.round(totalWater/waterDays))} ml ／ 水分記録のある${waterDays}日間`:'水分の記録はまだありません';med.textContent=`お薬のチェック 合計 ${medChecks} 回 ／ 7日間`;$('history-summary').replaceChildren(water,med);
+}
+function requestUndo(type,slot,label){
+ const day=today();pendingUndo={type,slot,date:activeDay,expected:type==='water'?JSON.stringify(day.water.at(-1)):day.meds[slot]};
+ $('undo-description').textContent=type==='water'?`直前の水分 ${day.water.at(-1).amount} ml の記録を取り消します。`:`${label}のお薬のチェックを取り消します。`;$('undo-dialog').showModal();$('cancel-undo').focus();
+}
+function toggleMed(slot,label){
+ if(syncDate())return;
+ if(today().meds[slot]){requestUndo('med',slot,label);return;}
+ if(commit(data=>{const day=writableDay(data);if(!day.meds[slot])day.meds[slot]=new Date().toISOString();}))announce(`${label}のお薬を記録しました`);
+}
+document.querySelectorAll('[data-amount]').forEach(button=>button.addEventListener('click',()=>{
+ if(syncDate())return;const amount=Number(button.dataset.amount);
+ if(commit(data=>writableDay(data).water.push({amount,at:new Date().toISOString()})))announce(`${amount} ml を記録しました`);
+}));
+$('undo-water').addEventListener('click',()=>{if(!syncDate()&&today().water.length)requestUndo('water');});
+$('cancel-undo').addEventListener('click',()=>{$('undo-dialog').close();pendingUndo=null;});
+$('confirm-undo').addEventListener('click',()=>{
+ if(syncDate()||!pendingUndo)return;const pending=pendingUndo;let removed=false;
+ if(commit(data=>{const day=data.days[pending.date];if(!day)return;if(pending.type==='water'){if(JSON.stringify(day.water.at(-1))===pending.expected){day.water.pop();removed=true;}}else if(day.meds[pending.slot]===pending.expected){delete day.meds[pending.slot];removed=true;}})){$('undo-dialog').close();pendingUndo=null;announce(removed?'記録を取り消しました':'記録が変更されています。最新の内容を確認してください。');}
+});
+$('open-goal').addEventListener('click',()=>{syncDate();$('goal-input').value=state.goal??'';$('goal-error').textContent='';$('goal-dialog').showModal();$('goal-input').focus();});
+$('cancel-goal').addEventListener('click',()=>$('goal-dialog').close());
+$('goal-form').addEventListener('submit',event=>{
+ event.preventDefault();syncDate();const raw=$('goal-input').value.trim(),goal=Number(raw);
+ if(!raw||!Number.isInteger(goal)||goal<1||goal>10000){$('goal-error').textContent='1〜10,000の整数を入力してください。';$('goal-input').focus();return;}
+ if(commit(data=>{data.goal=goal;writableDay(data).goal=goal;})){$('goal-dialog').close();announce(`目標を ${fmt(goal)} ml に設定しました`);}
+});
+window.addEventListener('storage',event=>{if(event.key===STORAGE_KEY||event.key===null){try{state=readStore();syncDate();render();}catch{readFailed=true;error('保存された記録を読み込めません。入力を停止しました。ブラウザを開き直してください。');render();}}});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncDate();});window.addEventListener('focus',syncDate);setInterval(syncDate,15000);render();
+</script>
+</body>
+</html>
